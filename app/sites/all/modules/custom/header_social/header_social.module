@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function header_social_block_info() {
+  $blocks = array();
+  $blocks['social_contact_header'] = array(
+    'info' => t('Contact and Social media header element'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function header_social_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'social_content_header':
+      $block['subject'] = '';
+      $block['content'] = _header_social_block_content();
+      break;
+  }
+
+  return $block;
+}
+
+function _header_social_block_content() {
+  $output = 'kuznia@barberossa.pl | +48 793 925 641 | <img  class="facebook-social" src="./sites/all/themes/barberossa/images/facebook.png"/> <img  class="instagram-social" src="./sites/all/themes/barberossa/images/instagram.png"/>';
+  return $output;
+}

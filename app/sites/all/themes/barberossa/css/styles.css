@@ -29,10 +29,19 @@ body {
     height: 50px;
 }
 
-#navigation .block {
+#navigation .links li {
     float: left;
+    padding: 0 10px 0 0;
+    list-style-type: none;
+    list-style-image: none;
+    margin-right: 2%;
+}
+
+#navigation .block {
+    float: right;
     margin-top: -20px;
     color: white;
+    width: 410px;
 }
 
 #navigation .block a {
@@ -52,8 +61,8 @@ body {
 }
 
 #main-menu {
-    width: 40%;
-    margin-left: 10%;
+    width: 75%;
+    margin-left: 15px;
     float: left;
 }
 
@@ -65,7 +74,7 @@ body {
 }
 
 #main-menu li a:hover {
-    color: #404040;
+    color: #fff;
     text-decoration: none;
 }
 
